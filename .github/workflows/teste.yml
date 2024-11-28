@@ -29,5 +29,5 @@ jobs:
 
       - name: Execute teste_report
         id: teste1
-        run: poetry run robot
+        run: robot -d ./Reports  teste1/
         continue-on-error: true
