@@ -1,27 +1,8 @@
-name: Execução de teste regressivos
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
- 
-jobs:
-  executando_testes:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: actions/checkout@v4
-        uses: actions/checkout@v2
-
-      - name: Instalar python
-        uses: actions/setup-python@v3
-        with:
-          python-version: 3.13.0
-          run: 
-            python run
-
-      - name: Execute teste_report
-        id: teste1
-        run: robot -d ./Reports  teste1/
-        continue-on-error: true
+Testes:
+image: marketsquare/robotframework-browser
+stage: test
+script:
+    - robot -x xunit.xml -d logs -b console.log teste1.robot
+  reports:
+    junit: logs/xunit.xml
