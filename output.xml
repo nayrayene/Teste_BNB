@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-28T19:49:50.355563" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste2" source="C:\Users\Dell\Teste_BNB\teste2.robot">
+<test id="s1-t1" name="Cenário 1: Acessando site BNB" line="18">
+<kw name="Abrir site BNB">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-28T19:49:50.891394" level="INFO">Opening browser 'chrome' to base url 'https://bnb.gov.br/'.</msg>
+<arg>${SITE_URL_BNB}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-28T19:49:50.890626" elapsed="9.682990"/>
+</kw>
+<status status="PASS" start="2024-11-28T19:49:50.888936" elapsed="9.687805"/>
+</kw>
+<kw name="Esperar Página Carregar">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-28T19:50:10.589553" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-28T19:50:00.585612" elapsed="10.004358"/>
+</kw>
+<status status="PASS" start="2024-11-28T19:50:00.583899" elapsed="10.007166"/>
+</kw>
+<tag>Cenario1</tag>
+<status status="PASS" start="2024-11-28T19:49:50.887277" elapsed="19.710311"/>
+</test>
+<status status="PASS" start="2024-11-28T19:49:50.360431" elapsed="20.248992"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Cenario1</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Teste2">Teste2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

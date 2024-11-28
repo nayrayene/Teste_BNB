@@ -3,7 +3,7 @@ Library  SeleniumLibrary
 Library  BuiltIn
 
 ** Variables **
-${SITE_URL}   https://automationpratice.com.br/  
+${SITE_URL}   https://automationpratice.cm.br/  
 ${USUARIO_EMAIL}  qazando@teste.com   
 ${USUAARIO_SENHA}    123456 
 
