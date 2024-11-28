@@ -7,7 +7,7 @@ on:
     branches: [ main ]
  
 jobs:
-  execute_test:
+  executando_testes:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,12 +29,5 @@ jobs:
 
       - name: Execute teste_report
         id: teste1
-        run: poetry run robot -d ./reports .
+        run: poetry run robot
         continue-on-error: true
-
-      - name: Execute teste
-        if: steps.teste1.outcome != 'success'
-        run: |
-          poetry run robot -d ./reports --rerunfailed ./reports/output.xml --output rerun.xml .
-        continue-on-error: true
-        
