@@ -3,25 +3,14 @@ Library  SeleniumLibrary
 Library  BuiltIn
 
 ** Variables **
-${SITE_URL_BNB}   https://bnb.gov.br/  
-${SITE_URL}   https://automationpratice.com.br/  
+${SITE_URL}   https://automationpratice.cm.br/  
 ${USUARIO_EMAIL}  qazando@teste.com   
 ${USUAARIO_SENHA}    123456 
 
 ** Keywords **
-
-Abrir esse site
-    [Arguments]  ${url}
-    Open Browser    ${url}    chrome
-
-Abrir site BNB
-    Open Browser    ${SITE_URL_BNB}    chrome
-
 Abrir Site
     Open Browser    ${SITE_URL}    chrome
-
-Esperar Página Carregar
-    Sleep   5s
+    Esperar Elemento    10
 
 Clicar em Link de Login
     Click Element    xpath://a[@href='/login']
@@ -39,26 +28,24 @@ Verificar texto login realizado
     ${texto_atual}      Get Text    id:swal2-title
     Should Be Equal As Strings     ${texto_atual}      Login realizado
 
+Esperar Elemento
+    [Arguments]    ${tempo}
+    Set Selenium Implicit Wait    ${tempo}s
+
+Tirar print do teste
+    Capture Page Screenshot
+
 ** Test Cases **
 Cenário 1: Acessando o site da QAzando
     [Tags]  Cenario1
     Abrir Site
-    Esperar Página Carregar
+    Tirar print do teste
     Clicar em Link de Login
-    Esperar Página Carregar
+    Tirar print do teste
     Preencher Campo de E-mail
     Preencher Campo de Senha
-    Esperar Página Carregar
+    Tirar print do teste
     Clicar em Botão de Login
-    Esperar Página Carregar
+    Tirar print do teste
     Verificar texto login realizado
-    Esperar Página Carregar
-
-Cenário 2: Acessando site BNB
-    [Tags]  Cenario2
-    Abrir site BNB
-
-Cenário 3: Testando valor no teste
-    [Tags]  Cenario3
-    Abrir esse site     https://www.google.com/
-   
+     

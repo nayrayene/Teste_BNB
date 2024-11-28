@@ -1,94 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-28T14:54:42.040817" rpa="false" schemaversion="5">
-<suite id="s1" name="Teste3" source="C:\Users\Dell\Documents\Projetos\Exemplo-bnb\teste3.robot">
-<test id="s1-t1" name="Cenário 1: Acessando o site da QAzando" line="37">
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-28T20:09:40.259301" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste" source="C:\Users\Dell\Teste_BNB\Testes\teste.robot">
+<test id="s1-t1" name="Cenário 1: Acessando o site da QAzando" line="39">
 <kw name="Abrir Site">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-28T14:54:42.625701" level="INFO">Opening browser 'chrome' to base url 'https://automationpratice.com.br/'.</msg>
+<msg time="2024-11-28T20:09:41.087020" level="INFO">Opening browser 'chrome' to base url 'https://automationpratice.cm.br/'.</msg>
+<msg time="2024-11-28T20:09:46.472289" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-28T20:09:46.472852" level="FAIL">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=131.0.6778.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6317D6CB5+28821]
+	(No symbol) [0x00007FF631743840]
+	(No symbol) [0x00007FF6315E578A]
+	(No symbol) [0x00007FF6315E2E88]
+	(No symbol) [0x00007FF6315D3BF9]
+	(No symbol) [0x00007FF6315D594F]
+	(No symbol) [0x00007FF6315D3EBF]
+	(No symbol) [0x00007FF6315D371B]
+	(No symbol) [0x00007FF6315D365A]
+	(No symbol) [0x00007FF6315D1274]
+	(No symbol) [0x00007FF6315D1B3C]
+	(No symbol) [0x00007FF6315E885A]
+	(No symbol) [0x00007FF6316801FE]
+	(No symbol) [0x00007FF63165F2FA]
+	(No symbol) [0x00007FF63167F412]
+	(No symbol) [0x00007FF63165F0A3]
+	(No symbol) [0x00007FF63162A778]
+	(No symbol) [0x00007FF63162B8E1]
+	GetHandleVerifier [0x00007FF631B0FCAD+3408013]
+	GetHandleVerifier [0x00007FF631B2741F+3504127]
+	GetHandleVerifier [0x00007FF631B1B5FD+3455453]
+	GetHandleVerifier [0x00007FF63189BDBB+835995]
+	(No symbol) [0x00007FF63174EB5F]
+	(No symbol) [0x00007FF63174A814]
+	(No symbol) [0x00007FF63174A9AD]
+	(No symbol) [0x00007FF63173A199]
+	BaseThreadInitThunk [0x00007FFEECDF7374+20]
+	RtlUserThreadStart [0x00007FFEEE5FCC91+33]
+</msg>
 <arg>${SITE_URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-28T14:54:42.623875" elapsed="5.543316"/>
+<status status="FAIL" start="2024-11-28T20:09:41.085853" elapsed="5.407745">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=131.0.6778.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6317D6CB5+28821]
+	(No symbol) [0x00007FF631743840]
+	(No symbol) [0x00007FF6315E578A]
+	(No symbol) [0x00007FF6315E2E88]
+	(No symbol) [0x00007FF6315D3BF9]
+	(No symbol) [0x00007FF6315D594F]
+	(No symbol) [0x00007FF6315D3EBF]
+	(No symbol) [0x00007FF6315D371B]
+	(No symbol) [0x00007FF6315D365A]
+	(No symbol) [0x00007FF6315D1274]
+	(No symbol) [0x00007FF6315D1B3C]
+	(No symbol) [0x00007FF6315E885A]
+	(No symbol) [0x00007FF6316801FE]
+	(No symbol) [0x00007FF63165F2FA]
+	(No symbol) [0x00007FF63167F412]
+	(No symbol) [0x00007FF63165F0A3]
+	(No symbol) [0x00007FF63162A778]
+	(No symbol) [0x00007FF63162B8E1]
+	GetHandleVerifier [0x00007FF631B0FCAD+3408013]
+	GetHandleVerifier [0x00007FF631B2741F+3504127]
+	GetHandleVerifier [0x00007FF631B1B5FD+3455453]
+	GetHandleVerifier [0x00007FF63189BDBB+835995]
+	(No symbol) [0x00007FF63174EB5F]
+	(No symbol) [0x00007FF63174A814]
+	(No symbol) [0x00007FF63174A9AD]
+	(No symbol) [0x00007FF63173A199]
+	BaseThreadInitThunk [0x00007FFEECDF7374+20]
+	RtlUserThreadStart [0x00007FFEEE5FCC91+33]
+</status>
 </kw>
 <kw name="Esperar Elemento">
-<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>${tempo}s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-11-28T14:54:48.170051" elapsed="0.007973"/>
-</kw>
 <arg>10</arg>
-<status status="PASS" start="2024-11-28T14:54:48.168514" elapsed="0.010057"/>
+<status status="NOT RUN" start="2024-11-28T20:09:46.494437" elapsed="0.000128"/>
 </kw>
-<status status="PASS" start="2024-11-28T14:54:42.621153" elapsed="5.557649"/>
+<status status="FAIL" start="2024-11-28T20:09:41.083001" elapsed="5.412076">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=131.0.6778.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6317D6CB5+28821]
+	(No symbol) [0x00007FF631743840]
+	(No symbol) [0x00007FF6315E578A]
+	(No symbol) [0x00007FF6315E2E88]
+	(No symbol) [0x00007FF6315D3BF9]
+	(No symbol) [0x00007FF6315D594F]
+	(No symbol) [0x00007FF6315D3EBF]
+	(No symbol) [0x00007FF6315D371B]
+	(No symbol) [0x00007FF6315D365A]
+	(No symbol) [0x00007FF6315D1274]
+	(No symbol) [0x00007FF6315D1B3C]
+	(No symbol) [0x00007FF6315E885A]
+	(No symbol) [0x00007FF6316801FE]
+	(No symbol) [0x00007FF63165F2FA]
+	(No symbol) [0x00007FF63167F412]
+	(No symbol) [0x00007FF63165F0A3]
+	(No symbol) [0x00007FF63162A778]
+	(No symbol) [0x00007FF63162B8E1]
+	GetHandleVerifier [0x00007FF631B0FCAD+3408013]
+	GetHandleVerifier [0x00007FF631B2741F+3504127]
+	GetHandleVerifier [0x00007FF631B1B5FD+3455453]
+	GetHandleVerifier [0x00007FF63189BDBB+835995]
+	(No symbol) [0x00007FF63174EB5F]
+	(No symbol) [0x00007FF63174A814]
+	(No symbol) [0x00007FF63174A9AD]
+	(No symbol) [0x00007FF63173A199]
+	BaseThreadInitThunk [0x00007FFEECDF7374+20]
+	RtlUserThreadStart [0x00007FFEEE5FCC91+33]
+</status>
+</kw>
+<kw name="Tirar print do teste">
+<status status="NOT RUN" start="2024-11-28T20:09:46.497287" elapsed="0.000117"/>
 </kw>
 <kw name="Clicar em Link de Login">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T14:54:48.187071" level="INFO">Clicking element 'xpath://a[@href='/login']'.</msg>
-<arg>xpath://a[@href='/login']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T14:54:48.185989" elapsed="1.116750"/>
+<status status="NOT RUN" start="2024-11-28T20:09:46.498874" elapsed="0.000209"/>
 </kw>
-<status status="PASS" start="2024-11-28T14:54:48.184950" elapsed="1.118160"/>
+<kw name="Tirar print do teste">
+<status status="NOT RUN" start="2024-11-28T20:09:46.512915" elapsed="0.000096"/>
 </kw>
 <kw name="Preencher Campo de E-mail">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-28T14:54:49.325171" level="INFO">Typing text 'qazando@teste.com' into text field 'id:user'.</msg>
-<arg>id:user</arg>
-<arg>${USUARIO_EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T14:54:49.319849" elapsed="0.723404"/>
-</kw>
-<status status="PASS" start="2024-11-28T14:54:49.317053" elapsed="0.726578"/>
+<status status="NOT RUN" start="2024-11-28T20:09:46.513518" elapsed="0.000094"/>
 </kw>
 <kw name="Preencher Campo de Senha">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-28T14:54:50.046181" level="INFO">Typing text '123456' into text field 'id:password'.</msg>
-<arg>id:password</arg>
-<arg>${USUAARIO_SENHA}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T14:54:50.045355" elapsed="0.291373"/>
+<status status="NOT RUN" start="2024-11-28T20:09:46.514158" elapsed="0.000078"/>
 </kw>
-<status status="PASS" start="2024-11-28T14:54:50.044493" elapsed="0.292749"/>
+<kw name="Tirar print do teste">
+<status status="NOT RUN" start="2024-11-28T20:09:46.514669" elapsed="0.000074"/>
 </kw>
 <kw name="Clicar em Botão de Login">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-28T14:54:50.344809" level="INFO">Clicking element 'id:btnLogin'.</msg>
-<arg>id:btnLogin</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T14:54:50.344351" elapsed="0.370125"/>
+<status status="NOT RUN" start="2024-11-28T20:09:46.523948" elapsed="0.000147"/>
 </kw>
-<status status="PASS" start="2024-11-28T14:54:50.343361" elapsed="0.371511"/>
+<kw name="Tirar print do teste">
+<status status="NOT RUN" start="2024-11-28T20:09:46.526282" elapsed="0.000106"/>
 </kw>
 <kw name="Verificar texto login realizado">
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-11-28T14:54:51.085923" level="INFO">${texto_atual} = Login realizado</msg>
-<var>${texto_atual}</var>
-<arg>id:swal2-title</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-28T14:54:50.716623" elapsed="0.369428"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${texto_atual}</arg>
-<arg>Login realizado</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-11-28T14:54:51.086556" elapsed="0.002160"/>
-</kw>
-<status status="PASS" start="2024-11-28T14:54:50.715759" elapsed="0.373277"/>
+<status status="NOT RUN" start="2024-11-28T20:09:46.530251" elapsed="0.000230"/>
 </kw>
 <tag>Cenario1</tag>
-<status status="PASS" start="2024-11-28T14:54:42.617707" elapsed="8.480793"/>
+<status status="FAIL" start="2024-11-28T20:09:41.080918" elapsed="5.454565">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=131.0.6778.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6317D6CB5+28821]
+	(No symbol) [0x00007FF631743840]
+	(No symbol) [0x00007FF6315E578A]
+	(No symbol) [0x00007FF6315E2E88]
+	(No symbol) [0x00007FF6315D3BF9]
+	(No symbol) [0x00007FF6315D594F]
+	(No symbol) [0x00007FF6315D3EBF]
+	(No symbol) [0x00007FF6315D371B]
+	(No symbol) [0x00007FF6315D365A]
+	(No symbol) [0x00007FF6315D1274]
+	(No symbol) [0x00007FF6315D1B3C]
+	(No symbol) [0x00007FF6315E885A]
+	(No symbol) [0x00007FF6316801FE]
+	(No symbol) [0x00007FF63165F2FA]
+	(No symbol) [0x00007FF63167F412]
+	(No symbol) [0x00007FF63165F0A3]
+	(No symbol) [0x00007FF63162A778]
+	(No symbol) [0x00007FF63162B8E1]
+	GetHandleVerifier [0x00007FF631B0FCAD+3408013]
+	GetHandleVerifier [0x00007FF631B2741F+3504127]
+	GetHandleVerifier [0x00007FF631B1B5FD+3455453]
+	GetHandleVerifier [0x00007FF63189BDBB+835995]
+	(No symbol) [0x00007FF63174EB5F]
+	(No symbol) [0x00007FF63174A814]
+	(No symbol) [0x00007FF63174A9AD]
+	(No symbol) [0x00007FF63173A199]
+	BaseThreadInitThunk [0x00007FFEECDF7374+20]
+	RtlUserThreadStart [0x00007FFEEE5FCC91+33]
+</status>
 </test>
-<status status="PASS" start="2024-11-28T14:54:42.043401" elapsed="9.061872"/>
+<status status="FAIL" start="2024-11-28T20:09:40.262439" elapsed="6.314743"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Cenario1</stat>
+<stat pass="0" fail="1" skip="0">Cenario1</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Teste3">Teste3</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Teste">Teste</stat>
 </suite>
 </statistics>
 <errors>
