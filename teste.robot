@@ -32,13 +32,20 @@ Esperar Elemento
     [Arguments]    ${tempo}
     Set Selenium Implicit Wait    ${tempo}s
 
+Tirar print do teste
+    Capture Page Screenshot
 
 ** Test Cases **
 Cenário 1: Acessando o site da QAzando
     [Tags]  Cenario1
     Abrir Site
+    Tirar print do teste
     Clicar em Link de Login
+    Tirar print do teste
     Preencher Campo de E-mail
     Preencher Campo de Senha
+    Tirar print do teste
     Clicar em Botão de Login
+    Tirar print do teste
     Verificar texto login realizado
+     
